@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Floricultura Delicados&Afetivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="titulo">Bem Vindo a Floricultura Delicados&Afetivos</h1>
+        <nav>
+            <ol>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#serviços">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2 class="caixa">Sobre Nós</h2>
+            <p class="caixa">Na Delicados&Afetivo, acreditamos que cada pétala conta uma história. Nascemos da paixão
+                por transformar
+                sentimentos em arranjos únicos, feitos à mão e com o frescor que só a natureza oferece. Seja para
+                celebrar um grande
+                amor, cultivar uma amizade ou colorir o seu próprio dia, nossa missão é levar a beleza e a poesia das
+                flores até você.
+                Deixe a gente florir o seu momento!</p>
+            <img src="https://blog-obahortifruti.redeoba.com.br/wp-content/uploads/2021/03/Flores_Mobile_800x475px.jpg"
+                alt="Fachada da Floricultura Delicados&Afetivos" />
+        </section>
+
+        <section id="serviços">
+            <h2 class="caixa">Serviços Oferecidos</h2>
+            <ul>
+                <li class="caixa">Entrega agendada e Expressa</li>
+                <li class="caixa">Cartão de mensagem Personalizada</li>
+                <li class="caixa">Kit presente</li>
+                <li class="caixa">Assinatura de Flores</li>
+                <li class="caixa">Decoração de ambientes Coorporativos</li>
+                <li class="caixa">Paisagismo Interno</li>
+                <li class="caixa">Monte seu Buquê Online</li>
+                <li class="caixa">Flores Preservadas (Desidratadas)</li>
+                <li class="caixa">Decoração de Mini-Wenddings</li>
+                <li class="caixa">Bouquet de Noiva sob medida</li>
+                <li class="caixa">Consultoria de Cuidado</li>
+
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <form id="formulario-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" />
+                <label for="assunto"> Assunto:</label>
+
+                <select id="assunto" name="assunto" required>
+                    <option value="" disabled selected>Escolha um Assunto</option>
+                    <option value="orçamento">Orçamento</option>
+                    <option value="suporte">Suporte Técnico</option>
+                    <option value="parceria"> Parceria</option>
+                    <option value="outros"> Outros</option>
+                </select>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem.."></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    Aceito os <a href="#" style="color:#d400b1; text-decoration: underline;">termos de uso</a>
+                </label> <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p id="rodape">&copy;<span id="ano">2026</span> Floricultura Delicados & Afetivos. Todos os direitos reservados.
+        </p>
+    </footer>
+</body>
+
+</html>

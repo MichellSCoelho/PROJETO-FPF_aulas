@@ -1,5 +1,4 @@
 class EmailService:
-        
     def enviar(self, msg):
         print('Enviando email: {}'.format(msg))
 
@@ -9,8 +8,8 @@ class Usuario:
         self.servicoinjetado = servicoinjetado
 
     def mandarEmail(self):
-        self.servicoinjetado.enviar('olá, tudo bem?')
+        self.servicoinjetado.enviar("Olá, tudo bem?")
 
-servico = EmailService()
-Usuario = Usuario(servico)
-Usuario.mandarEmail()
+
+usuario = Usuario(EmailService())
+usuario.mandarEmail()
