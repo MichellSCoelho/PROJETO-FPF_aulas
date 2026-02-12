@@ -1,197 +1,98 @@
-/* Importando uma fonte mais moderna e limpa */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #223859 0%, #a7b3c6 100%);
-    font-family: 'Inter', sans-serif;
-    color: #2d3436;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
 }
 
-.perfil-container {
-    background: #413d95;
-    max-width: 1000px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+.profile-card {
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    width: 350px;
+    padding: 30px;
     border-radius: 20px;
-    overflow: hidden;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-/* Lado Esquerdo - Destaque Visual */
-.perfil-foto {
-    background-color: #1981d1;
-    /* Azul Engenharia */
-    background-image: linear-gradient(180deg, #0984e3 0%, #74b9ff 100%);
-    padding: 60px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     text-align: center;
-    flex: 1;
-    min-width: 320px;
-    color: white;
+    transition: transform 0.3s ease;
 }
 
-.moldura {
-    width: 220px;
-    height: 220px;
+.profile-card:hover {
+    transform: translateY(-8px);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 8px solid rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    margin: 0 auto 25px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.moldura img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.moldura img:hover {
-    transform: scale(1.1);
-}
-
-.perfil-foto h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: -0.5px;
-}
-
-.cargo {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    font-weight: 300;
-}
-
-/* Lado Direito - Conteúdo */
-.perfil-info {
-    padding: 50px;
-    flex: 2;
-    min-width: 350px;
-    background: white;
+    border: 5px solid #ffd6e0;
+    margin-bottom: 15px;
 }
 
 h2 {
-    color: #0984e3;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+    color: #6d6875;
+    margin-bottom: 5px;
+}
+
+.bio {
+    font-size: 14px;
+    color: #555;
+    margin: 15px 0;
+}
+
+.section-title {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #b5838d;
+}
+
+.skills {
     display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
 }
 
-h2::after {
-    content: "";
-    flex: 1;
-    height: 2px;
-    background: #dfe6e9;
-    margin-left: 15px;
+.skill {
+    background: #cdb4db;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
 }
 
-.bio p {
-    line-height: 1.8;
-    color: #636e72;
-    margin-bottom: 20px;
-    text-align: justify;
+.myskills {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
 }
 
-.bio strong {
-    color: #2d3436;
-}
-
-/* Seção de Habilidades */
-.habilidades {
-    margin-top: 40px;
-}
-
-.habilidades ul {
-    list-style: none;
-}
-
-.habilidades li {
-    margin-bottom: 20px;
-}
-
-.habilidades span {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #2d3436;
-}
-
-.barra {
-    background: #dfe6e9;
-    height: 10px;
-    border-radius: 10px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.progresso {
-    background: linear-gradient(90deg, #0984e3, #00d2d3);
-    height: 100%;
-    border-radius: 10px;
-    transition: width 1.5s cubic-bezier(0.1, 0.42, 0.41, 1);
-}
-
-/* Botão Voltar */
-.btn-voltar {
-    display: inline-block;
-    margin-top: 30px;
-    text-decoration: none;
-    color: #0984e3;
-    font-weight: 600;
-    padding: 12px 30px;
-    border: 2px solid #0984e3;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
-.btn-voltar:hover {
-    background: #0984e3;
+.btn-edit {
+    margin-top: 20px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ffafcc;
     color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(9, 132, 227, 0.3);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Animação de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-edit:hover {
+    background: #ffc8dd;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .perfil-container {
-        flex-direction: column;
-    }
-
-    .perfil-foto {
-        padding: 40px 20px;
-    }
-
-    .perfil-info {
-        padding: 30px 20px;
+@media (max-width: 400px) {
+    .profile-card {
+        width: 90%;
     }
 }

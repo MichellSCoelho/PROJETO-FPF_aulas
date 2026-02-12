@@ -3,77 +3,70 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Perfil Criativo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Page Pessoal</title>
-    <link rel="stylesheet" href="style-perfil.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Vinculando o CSS -->
+    <link rel="stylesheet" href="mystyles.css">
 </head>
 
 <body>
 
-    <main class="perfil-container">
-        <section class="perfil-foto">
-            <div class="moldura">
-                <img src="Captura de tela de 2025-06-19 22-38-44.png" alt="Sua Foto Profissional">
-            </div>
-            <h1>Michelle Coelho</h1>
-            <p class="cargo">Um pouco de Mim...</p>
-        </section>
+    <div class="profile-card">
+        <h1 class="welcome">Seja Bem-vindo!</h1>
+        <img src="Captura de tela de 2025-06-19 22-38-44.png" alt="Foto de Perfil" class="profile-img">
 
-        <section class="perfil-info">
-            <div class="bio">
-                <h2>Trajetória Profissional</h2>
-                <p>
-                    <strong>Onde a precisão da Engenharia encontra a visão estratégica de Processos.</strong><br><br>
-                    Sou profissional em transição estratégica para a <strong>Engenharia da Computação</strong> (finalista em 2026),
-                    unindo uma trajetória sólida na indústria à paixão pela tecnologia. Minha experiência foi moldada em empresas de
-                    grande porte, como <strong>Whirlpool e Britânia</strong>, onde desenvolvi um olhar crítico voltado para a
-                    Qualidade, Otimização de Processos e Gestão Industrial.
-                </p>
-                <p>
-                    Hoje, aplico esse <em>mindset</em> analítico e orientado a dados em contextos de tecnologia e automação. Minha
-                    especialidade reside na intersecção entre a gestão e a inovação: transformo demandas complexas em soluções
-                    visuais através de <strong>Power BI</strong>, garanto a integridade de informações técnicas e utilizo o rigor do
-                    <strong>Lean Manufacturing</strong> para elevar o padrão de excelência em projetos de software.
-                </p>
-                <p>
-                    Com pós-graduação em Gestão da Qualidade, meu objetivo é atuar em projetos de Engenharia de Software ou Dados,
-                    onde a visão holística dos processos gere inovação com impacto real.
-                </p>
-            </div>
+        <h2>Michelle Coelho</h2>
+        <!-- Redes Sociais -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/michelle-souza-coelho-manausamazonas/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
 
-            <div class="habilidades">
-                <h2>Especialidades</h2>
-                <ul>
-                    <li>
-                        <span>Dirijo bem</span>
-                        <div class="barra">
-                            <div class="progresso" style="width: 95%;"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <span>Lavo, Passo & Cozinho</span>
-                        <div class="barra">
-                            <div class="progresso" style="width: 85%;"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <span>Meto o Louco</span>
-                        <div class="barra">
-                            <div class="progresso" style="width: 90%;"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <span>Disponível para trabalhos</span>
-                        <div class="barra">
-                            <div class="progresso" style="width: 75%;"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <a href="https://www.instagram.com/miih_clhs/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
 
-            <a href="index.html" class="btn-voltar">Voltar ao Site</a>
-        </section>
-    </main>
+        <hr>
+
+        <p class="bio">
+            Engenheira da Computação criativa apaixonado por tecnologia e inovação. Sempre aprendendo algo novo 🚀
+        </p>
+
+        <div class="section-title">Habilidades</div>
+        <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">UI/UX</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Postgresql</span>
+            <span class="skill">Python</span>
+        </div>
+
+        <div class="section-title">Minhas Skills</div>
+
+        <p class="myskills">
+            ✔ Desenvolvimento Web<br>
+            ✔ Design Responsivo<br>
+            ✔ Banco de Dados<br>
+            ✔ APIs REST
+        </p>
+        <!-- Contato -->
+        <div class="contact">
+            <p><i class="fas fa-envelope"></i> michellcoelhos@gmail.com</p>
+            <p><i class="fab fa-whatsapp"></i> (92) 99389-8408</p>
+        </div>
+
+        <button class="btn-edit">Editar Perfil</button>
+    </div>
 
 </body>
 
