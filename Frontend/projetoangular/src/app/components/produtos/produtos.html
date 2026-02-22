@@ -1,0 +1,10 @@
+<ul>
+    @for (p of lprodutos; track p){
+    <li [class.prom]="p.promocao">
+        {{ p.nome}}, {{ p.preco}}
+        @if (p.promocao) {
+        <span> Em promocao!</span>
+        }
+    </li>
+    }
+</ul>

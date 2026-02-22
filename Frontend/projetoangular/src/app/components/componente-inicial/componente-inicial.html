@@ -1,0 +1,53 @@
+<h2> --- Interpolação --- </h2>
+<h4> {{ nome }}, {{ profissao }} </h4>
+<p>Idade ano que vem: {{ idade + 1 }} </p>
+<!--Ternário: condiçãoBooleana ? mostra se for true : mostra se for false -->
+<p>Status {{ ativo ? 'Ativo' : 'Inativo' }} </p>
+
+<h2> --- Property Binding --- </h2>
+<img [src]="url_da_imagem" width="90px" alt="Imagem">
+
+<button [disabled]="!ativo">Só funciona se ativo</button>
+<input [value]="nome">
+
+<h2> --- Event Binding --- </h2>
+<button (click)="mudarNome()">Mude seu Nome</button>
+<button (click)="alterarStatus()">Altere o Status</button>
+
+<input #novoHobbyInput>
+<button (click)="adicionarHobby(novoHobbyInput.value)">
+    Adicionar novo:
+</button>
+
+<h2> --- Two-way Binding ---</h2>
+<input [(ngModel)]="nome">
+<p>Nome digitado: {{ nome }}</p>
+
+<h2> Além desses 4, outros também são notavés:</h2>
+<h4> -> Class Binding </h4>
+<p [class.ativo]="ativo">Texto com classe dinâmica</p>
+<h4> -> Style Binding </h4>
+<p [style.color]="ativo?'green':'red'">Mudar a cor se estiver ativo</p>
+<h4> -> Atribite Binding </h4>
+<!-- quando a propriedade da tag não exite diretamente no DOM-->
+<table class="table_border">
+    <tr>
+        <th class="table_border">Coluna 1</th>
+        <th class="table_border">Coluna 2</th>
+    </tr>
+    <td [attr.colspan]="2">Coluna Dinamica"</td>
+</table>
+<hr>
+<br />
+<h1>Diretivas: if for</h1>
+@if (ativo) {
+<p>Usuário está ativo</p>
+} @else {
+<p>Usuário Inativo</p>
+}
+<!-- loop, iteração de array -->
+<ul>
+    @for (hobby of hobbies; track hobby){
+    <li>{{ hobby }}</li>
+    }
+</ul>

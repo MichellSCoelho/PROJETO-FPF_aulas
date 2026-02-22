@@ -1,0 +1,25 @@
+<h2>Lista de Tarefas</h2>
+
+<ul>
+    <li *ngFor="let tarefa of listaTarefas">
+
+        <strong>{{ tarefa.titulo }}</strong>
+        <p>{{ tarefa.descricao }}</p>
+
+        <button (click)="toggleConcluido(tarefa)">
+            {{ tarefa.concluido ? 'Concluído' : 'Pendente' }}
+        </button>
+
+        <hr>
+
+    </li>
+</ul>
+
+<!-- <ol>
+    @for (tarefa of listaDeTarefas; track tarefa) {
+    <li>
+        <input type="checkbox" id="cocluido" name="cncluido"/> 
+        {{ tarefa.titulo}} -> {{ tarefa.decricao}}
+    </li>
+    }
+</ol>-->

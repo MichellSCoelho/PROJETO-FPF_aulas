@@ -1,0 +1,12 @@
+<app-produtos></app-produtos>
+<router-outlet></router-outlet>
+<app-produtos></app-produtos>
+
+<nav>
+    <a [routerLink]="['/']">Inicial</a>
+    |
+    <a [routerLink]="['/produtos']">Produtos</a>
+    <a [routerLink]="['/tarefas']">Tarefas</a>
+</nav>
+<hr />
+<router-outlet></router-outlet>
